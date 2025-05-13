@@ -12,10 +12,12 @@ const findTheOldest = function (people) {
       currentPerson.yearOfBirth,
       currentPerson.yearOfDeath
     );
-    return oldestAge < currentAge ? currentPerson : oldest;
+    return oldestAge < currentAge ? currentPerson.name : oldest.name;
   });
 };
 
+
+//[0, 1, 2, 3] = oldest = 0, currentPerson = 1
 /* ALTERNATIVE SOLUTION
 const getAge = function (person) {
   // The nullish coalescing assignment operator
